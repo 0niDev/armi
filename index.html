@@ -94,6 +94,7 @@ html,body{background:var(--pink-pale);color:var(--ink);font-family:"Courier New"
 .stat-box .anim-content{padding:22px 12px;text-align:center}
 .stat-num-big{font-size:2rem;font-weight:900;display:block;color:var(--pink-dark);line-height:1}
 .stat-lab{font-size:9px;letter-spacing:2px;text-transform:uppercase;font-weight:900;opacity:0.45;display:block;margin-top:7px}
+.nalla-stat{color:#c0392b !important}
 
 /* REASONS */
 .reason-box .anim-content{padding:18px 16px;display:flex;gap:12px;align-items:flex-start}
@@ -218,11 +219,11 @@ html,body{background:var(--pink-pale);color:var(--ink);font-family:"Courier New"
 .q-title-wrap::before{content:'✿';font-size:16px;display:block;margin-bottom:7px}
 .q-text{font-size:1.6rem;font-weight:900;text-transform:uppercase;letter-spacing:-1px}
 .q-sub{font-size:10px;letter-spacing:2px;margin-top:7px;opacity:0.6;font-weight:700;text-transform:uppercase}
-.btn-area{position:relative;height:68px;display:flex;justify-content:center;align-items:center;margin-top:26px;margin-bottom:12px}
+.btn-area{position:relative;height:140px;display:flex;justify-content:center;align-items:center;margin-top:26px;margin-bottom:12px;overflow:visible}
 .btn-yes{background:var(--pink);color:var(--ink);border:var(--bw) solid var(--ink);box-shadow:var(--sh);font-family:inherit;font-size:.95rem;font-weight:900;padding:14px 36px;text-transform:uppercase;cursor:pointer;letter-spacing:2px;transition:all .15s;z-index:5;position:relative}
 .btn-yes:hover{transform:translate(-3px,-3px);box-shadow:var(--sh-lg)}
 .btn-yes:active{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--ink)}
-.btn-no{background:var(--surface);color:var(--ink);border:var(--bw) solid var(--ink);box-shadow:var(--sh);font-family:inherit;font-size:.95rem;font-weight:900;padding:14px 28px;text-transform:uppercase;cursor:pointer;letter-spacing:2px;position:absolute;left:50%;transform:translateX(-50%);transition:transform .45s cubic-bezier(.25,1.6,.5,1),opacity .3s;white-space:nowrap;z-index:4}
+.btn-no{background:var(--surface);color:var(--ink);border:var(--bw) solid var(--ink);box-shadow:var(--sh);font-family:inherit;font-size:.95rem;font-weight:900;padding:14px 28px;text-transform:uppercase;cursor:pointer;letter-spacing:2px;position:absolute;left:calc(50% + 110px);top:50%;transform:translateY(-50%);transition:left .45s cubic-bezier(.25,1.6,.5,1),top .45s cubic-bezier(.25,1.6,.5,1),opacity .3s;white-space:nowrap;z-index:4}
 .no-msg{min-height:16px;font-size:10px;font-weight:900;letter-spacing:2px;text-align:center;opacity:0.4;margin-top:5px;text-transform:uppercase}
 
 /* YES OVERLAY */
@@ -245,6 +246,32 @@ html,body{background:var(--pink-pale);color:var(--ink);font-family:"Courier New"
 .hk-bubble::after{content:'';position:absolute;bottom:-9px;left:18px;width:0;height:0;border-left:7px solid transparent;border-right:7px solid transparent;border-top:9px solid var(--ink)}
 .hk-bubble::before{content:'';position:absolute;bottom:-6px;left:19px;width:0;height:0;border-left:6px solid transparent;border-right:6px solid transparent;border-top:7px solid #fff;z-index:1}
 .hk-img{width:62px;height:62px;background:var(--pink-light);border:var(--bw) solid var(--ink);box-shadow:var(--sh);border-radius:50%;overflow:hidden;display:flex;align-items:center;justify-content:center;font-size:36px}
+
+/* NALLA COUNTER */
+.nalla-section{opacity:0;transform:translateY(14px);transition:all .7s cubic-bezier(.16,1,.3,1)}
+.nalla-section.show{opacity:1;transform:translateY(0)}
+.nalla-card{background:var(--surface);border:var(--bw) solid var(--ink);box-shadow:var(--sh-lg);padding:28px 22px;text-align:center;position:relative;overflow:hidden}
+.nalla-card::before{content:'';position:absolute;top:0;left:0;right:0;height:7px;background:var(--pink);border-bottom:var(--bw) solid var(--ink)}
+.nalla-title{font-size:11px;letter-spacing:3px;text-transform:uppercase;font-weight:900;opacity:0.45;margin-bottom:16px;margin-top:4px;display:block}
+.nalla-row{display:flex;gap:12px;justify-content:center;align-items:stretch;margin-bottom:14px}
+.nalla-box{flex:1;border:var(--bw) solid var(--ink);padding:18px 10px;position:relative;background:var(--pink-pale)}
+.nalla-box.winner{background:var(--pink);box-shadow:var(--sh)}
+.nalla-who{font-size:9px;letter-spacing:2px;text-transform:uppercase;font-weight:900;opacity:0.55;display:block;margin-bottom:8px}
+.nalla-num{font-size:2.4rem;font-weight:900;display:block;line-height:1;color:var(--pink-dark)}
+.nalla-box.winner .nalla-num{color:var(--ink)}
+.nalla-badge{position:absolute;top:-10px;right:-8px;background:var(--ink);color:var(--pink);font-size:8px;font-weight:900;letter-spacing:1px;padding:3px 7px;text-transform:uppercase}
+.nalla-vs{font-size:12px;font-weight:900;display:flex;align-items:center;color:var(--ink);opacity:0.3}
+.nalla-note{font-size:10px;letter-spacing:1px;text-transform:uppercase;font-weight:700;opacity:0.4;margin-top:4px}
+
+/* ILY COUNTER */
+.ily-row{display:flex;gap:12px;margin-top:14px}
+.ily-box{flex:1;border:var(--bw) solid var(--ink);padding:14px 10px;text-align:center;background:var(--pink-pale)}
+.ily-box.winner{background:var(--pink);box-shadow:var(--sh)}
+.ily-who{font-size:9px;letter-spacing:2px;text-transform:uppercase;font-weight:900;opacity:0.55;display:block;margin-bottom:6px}
+.ily-num{font-size:1.8rem;font-weight:900;display:block;color:var(--pink-dark);line-height:1}
+.ily-box.winner .ily-num{color:var(--ink)}
+.ily-label{font-size:8px;letter-spacing:1px;text-transform:uppercase;opacity:0.4;font-weight:700;display:block;margin-top:4px}
+.ily-divider{font-size:11px;font-weight:900;opacity:0.25;display:flex;align-items:center;flex-shrink:0}
 </style>
   </head>
   <body>
@@ -279,7 +306,7 @@ html,body{background:var(--pink-pale);color:var(--ink);font-family:"Courier New"
     <div id="hk-pet" onclick="petClick()">
       <div class="hk-bubble" id="hk-bubble">hello ♡</div>
       <div class="hk-img"><img
-          src="download (2).jpg"
+          src="https://media.giphy.com/media/H7kfFDvD9HSYGRbvid/giphy.gif"
           alt="hello kitty"
           style="width:100%;height:100%;object-fit:cover;border-radius:50%"></div>
     </div>
@@ -291,9 +318,9 @@ html,body{background:var(--pink-pale);color:var(--ink);font-family:"Courier New"
         <!-- HERO -->
         <div class="hero" id="hero">
           <span class="hero-kitty">🎀</span>
-          <span class="hero-tag">a little something ✿</span>
+          <span class="hero-tag">for you, armish ✿</span>
           <h1><span class="ul">For</span> You</h1>
-          <p class="hero-sub">every single word of it ♡</p>
+          <p class="hero-sub">1,676 times and counting ♡</p>
           <p class="hero-date">Sep 21, 2025 — always</p>
           <div class="scroll-hint"><span
               class="shl">↓</span><span>scroll</span></div>
@@ -352,85 +379,141 @@ html,body{background:var(--pink-pale);color:var(--ink);font-family:"Courier New"
                 want</span></div></div>
         </div>
 
-        <!-- REASONS -->
-        <div class="sh s-fade" id="reasons-s">Reasons I love you</div>
-        <div>
+        <!-- REASONS --> <div class="sh s-fade" id="reasons-s">Reasons I love
+          you</div> <div> <div class="block-wrapper reason-box reveal"><div
+              class="anim-bg"></div><div class="anim-content"><span
+                class="reason-badge">01</span><span
+                class="reason-text">"I am so so so proud of you. U have done so well."</span></div></div>
           <div class="block-wrapper reason-box reveal"><div
               class="anim-bg"></div><div class="anim-content"><span
-                class="reason-badge">01</span><span class="reason-text">The way
-                you laugh at things before you even finish hearing them — it is
-                impossible not to smile.</span></div></div>
+                class="reason-badge">02</span><span
+                class="reason-text">"I love you so much. Please take care of yourself."</span></div></div>
           <div class="block-wrapper reason-box reveal"><div
               class="anim-bg"></div><div class="anim-content"><span
-                class="reason-badge">02</span><span class="reason-text">How you
-                make even the most ordinary moments feel like they are worth
-                holding onto.</span></div></div>
+                class="reason-badge">03</span><span
+                class="reason-text">"U r peakkk. I know apna itna acha ppr dana."</span></div></div>
           <div class="block-wrapper reason-box reveal"><div
               class="anim-bg"></div><div class="anim-content"><span
-                class="reason-badge">03</span><span class="reason-text">The fact
-                that you are still completely you, no matter who else is in the
-                room.</span></div></div>
+                class="reason-badge">04</span><span
+                class="reason-text">"I miss you more."</span></div></div> <div
+            class="block-wrapper reason-box reveal"><div
+              class="anim-bg"></div><div class="anim-content"><span
+                class="reason-badge">05</span><span
+                class="reason-text">"Cutu hain ap."</span></div></div> <div
+            class="block-wrapper reason-box reveal"><div
+              class="anim-bg"></div><div class="anim-content"><span
+                class="reason-badge">06</span><span
+                class="reason-text">"Please call me when you get home. I will worry."</span></div></div>
           <div class="block-wrapper reason-box reveal"><div
               class="anim-bg"></div><div class="anim-content"><span
-                class="reason-badge">04</span><span class="reason-text">You have
-                no idea how good you are — and that somehow makes it even
-                better.</span></div></div>
+                class="reason-badge">07</span><span
+                class="reason-text">"I am proud of u too gng itna acha ppr diya hain apna."</span></div></div>
           <div class="block-wrapper reason-box reveal"><div
               class="anim-bg"></div><div class="anim-content"><span
-                class="reason-badge">05</span><span class="reason-text">Being
-                around you feels like the noise just turns off. Like everything
-                finally makes sense.</span></div></div>
+                class="reason-badge">08</span><span
+                class="reason-text">"Gng please never let me shave again."</span></div></div>
           <div class="block-wrapper reason-box reveal"><div
               class="anim-bg"></div><div class="anim-content"><span
-                class="reason-badge">06</span><span class="reason-text">Add your
-                own reason here — something only you two would
-                understand.</span></div></div>
+                class="reason-badge">09</span><span
+                class="reason-text">"I know you r peakkkk. U got this."</span></div></div>
+          <div class="block-wrapper reason-box reveal"><div
+              class="anim-bg"></div><div class="anim-content"><span
+                class="reason-badge">10</span><span
+                class="reason-text">"You are the armish. There is none."</span></div></div>
+          <div class="block-wrapper reason-box reveal"><div
+              class="anim-bg"></div><div class="anim-content"><span
+                class="reason-badge">11</span><span
+                class="reason-text">"Dont worry. Kuch nahi hota. I love you."</span></div></div>
+          <div class="block-wrapper reason-box reveal"><div
+              class="anim-bg"></div><div class="anim-content"><span
+                class="reason-badge">12</span><span
+                class="reason-text">"Gng you dont need to give me anything. I just want you."</span></div></div>
+          <div class="block-wrapper reason-box reveal"><div
+              class="anim-bg"></div><div class="anim-content"><span
+                class="reason-badge">13</span><span
+                class="reason-text">"I love you so much armish."</span></div></div>
+          <div class="block-wrapper reason-box reveal"><div
+              class="anim-bg"></div><div class="anim-content"><span
+                class="reason-badge">14</span><span
+                class="reason-text">"We will meet soon. Cuteeeee."</span></div></div>
+          <div class="block-wrapper reason-box reveal"><div
+              class="anim-bg"></div><div class="anim-content"><span
+                class="reason-badge">15</span><span
+                class="reason-text">"Trust me. Itnaaaa acha hona mari jaan dekh lana."</span></div></div>
         </div>
 
         <!-- PEEK 2 -->
         <div class="peek-wrap">
           <div class="peek-gif center" data-pk="2"><img
-              src="12512b0239d81bc7c869508f21fba11d.gif"
+              src="https://media.giphy.com/media/l0HlFZ3iL3wOjkPEI/giphy.gif"
               alt></div>
-          <p class="peek-label">Hello kitty ♡</p>
+          <p class="peek-label">a moment ♡</p>
         </div>
 
-        <!-- NOTES -->
         <div class="sh s-fade" id="notes-s">Little notes</div>
         <div class="notes-scroll s-fade">
-          <div class="note"><span class="note-sym">✿</span>My favorite thing is
-            when something happens during the day and the first person I want to
-            tell is you.<span class="note-from">— a thought at 2pm</span></div>
-          <div class="note"><span class="note-sym">♡</span>You are the only
-            person who makes silence feel like a conversation.<span
-              class="note-from">— every single time</span></div>
-          <div class="note"><span class="note-sym">🎀</span>I did not know what
-            I was waiting for until I stopped waiting and started choosing
-            you.<span class="note-from">— Sep 21</span></div>
-          <div class="note"><span class="note-sym">✿</span>Even on the days I am
-            hard to love, you do it anyway. That is not nothing. That is
-            everything.<span class="note-from">— a hard day</span></div>
-          <div class="note"><span class="note-sym">♡</span>You ruin other people
-            for me in the best possible way.<span class="note-from">—
-              honestly</span></div>
-          <div class="note"><span class="note-sym">🎀</span>Replace this with
-            something only you two would say. An inside joke. A real
-            memory.<span class="note-from">— you know when</span></div>
+          <!-- New Quotes -->
+          <div class="note"><span class="note-sym">✿</span>U r mine.<span
+              class="note-from">— always</span></div>
+          <div class="note"><span class="note-sym">♡</span>I like u<span
+              class="note-from">— simple truth</span></div>
+          <div class="note"><span class="note-sym">🎀</span>U r cute<span
+              class="note-from">— just saying</span></div>
+          <div class="note"><span class="note-sym">✿</span>Ap zayada achi
+            ho<span class="note-from">— sach</span></div>
+          <div class="note"><span class="note-sym">♡</span>You are nice ofc i
+            mention that everyyy where<span class="note-from">—
+              everywhere</span></div>
+          <div class="note"><span class="note-sym">🎀</span>I am proud of you
+            too<span class="note-from">— so proud</span></div>
+          <div class="note"><span class="note-sym">✿</span>U r preffffect<span
+              class="note-from">— absolutely</span></div>
+          <div class="note"><span class="note-sym">♡</span>I will do anything in
+            my power to stay with you<span class="note-from">— my
+              promise</span></div>
+          <div class="note"><span class="note-sym">🎀</span>U r nicer<span
+              class="note-from">— it's true</span></div>
+          <div class="note"><span class="note-sym">✿</span>I like you so
+            much<span class="note-from">— sm</span></div>
+          <div class="note"><span class="note-sym">♡</span>Gng you r one of the
+            nicest peeps i know<span class="note-from">— fr</span></div>
+          <div class="note"><span class="note-sym">🎀</span>I know you care<span
+              class="note-from">— I know</span></div>
+          <div class="note"><span class="note-sym">✿</span>You are the nicest
+            person i know<span class="note-from">— the nicest</span></div>
+          <div class="note"><span class="note-sym">♡</span>I like u sm<span
+              class="note-from">— a lot</span></div>
+          <div class="note"><span class="note-sym">🎀</span>There is no one
+            better for me<span class="note-from">— no one</span></div>
+          <div class="note"><span class="note-sym">✿</span>You are a wonderful
+            women<span class="note-from">— truly</span></div>
+          <div class="note"><span class="note-sym">♡</span>U r the nicest person
+            i know<span class="note-from">— best peep</span></div>
+          <div class="note"><span class="note-sym">🎀</span>I genuinely am proud
+            of you<span class="note-from">— genuinely</span></div>
+          <div class="note"><span class="note-sym">✿</span>I am happy where i
+            stand.<span class="note-from">— with you</span></div>
+          <div class="note"><span class="note-sym">♡</span>You take care of me
+            when im tired or when m sick.<span class="note-from">— thank
+              you</span></div>
+          <div class="note"><span class="note-sym">🎀</span>You made me feel so
+            happy<span class="note-from">— so happy</span></div>
+          <div class="note"><span class="note-sym">✿</span>I like you armish
+            fatima<span class="note-from">— always</span></div>
         </div>
-
         <!-- GALLERY -->
         <div class="sh s-fade" id="gallery-s">Gallery</div>
         <div class="gallery">
-          <div class="pc"><img src="image1.jpeg" alt></div>
-          <div class="pc"><img src="image2.jpeg" alt></div>
-          <div class="pc"><img src="image3.jpeg" alt></div>
-          <div class="pc"><img src="image4.jpeg" alt></div>
-          <div class="pc"><img src="image5.jpeg" alt></div>
-          <div class="pc"><img src="image6.jpeg" alt></div>
-          <div class="pc"><img src="image7.jpeg" alt></div>
-          <div class="pc"><img src="image8.jpeg" alt></div>
-          <div class="pc"><img src="image9.jpeg" alt></div>
-          <div class="pc"><img src="image10.jpeg" alt></div>
+          <div class="pc"><img src="image1.jpg" alt></div>
+          <div class="pc"><img src="image2.jpg" alt></div>
+          <div class="pc"><img src="image3.jpg" alt></div>
+          <div class="pc"><img src="image4.jpg" alt></div>
+          <div class="pc"><img src="image5.jpg" alt></div>
+          <div class="pc"><img src="image6.jpg" alt></div>
+          <div class="pc"><img src="image7.jpg" alt></div>
+          <div class="pc"><img src="image8.jpg" alt></div>
+          <div class="pc"><img src="image9.jpg" alt></div>
+          <div class="pc"><img src="image10.jpg" alt></div>
         </div>
 
         <!-- PEEK 3 -->
@@ -447,25 +530,24 @@ html,body{background:var(--pink-pale);color:var(--ink);font-family:"Courier New"
         <!-- US GALLERY -->
         <div class="sh s-fade">Us</div>
         <div class="gallery">
-          <div class="pc"><img src="us1.jpeg" alt></div>
-          <div class="pc"><img src="us2.jpeg" alt></div>
-          <div class="pc"><img src="us3.jpeg" alt></div>
-          <div class="pc"><img src="us4.jpeg" alt></div>
+          <div class="pc"><img src="us1.jpg" alt></div>
+          <div class="pc"><img src="us2.jpg" alt></div>
+          <div class="pc"><img src="us3.jpg" alt></div>
+          <div class="pc"><img src="us4.jpg" alt></div>
         </div>
 
         <!-- POLAROIDS -->
         <div class="sh s-fade">Polaroids</div>
         <div class="polaroids s-fade">
-          <div class="polaroid" style="--r:-4deg"><img src="image1.jpeg" alt><p
+          <div class="polaroid" style="--r:-4deg"><img src="image1.jpg" alt><p
               class="polaroid-cap">the first time</p></div>
-          <div class="polaroid" style="--r:3deg"><img src="image2.jpeg" alt><p
-              class="polaroid-cap">My wallpaper</p></div>
-          <div class="polaroid" style="--r:-2.5deg"><img src="image3.jpeg"
-              alt><p
+          <div class="polaroid" style="--r:3deg"><img src="image2.jpg" alt><p
+              class="polaroid-cap">couldn't stop smiling</p></div>
+          <div class="polaroid" style="--r:-2.5deg"><img src="image3.jpg" alt><p
               class="polaroid-cap">my favorite</p></div>
-          <div class="polaroid" style="--r:5deg"><img src="image4.jpeg" alt><p
+          <div class="polaroid" style="--r:5deg"><img src="image4.jpg" alt><p
               class="polaroid-cap">keep this one</p></div>
-          <div class="polaroid" style="--r:-3deg"><img src="us1.jpeg" alt><p
+          <div class="polaroid" style="--r:-3deg"><img src="us1.jpg" alt><p
               class="polaroid-cap">us ♡</p></div>
         </div>
 
@@ -480,68 +562,30 @@ html,body{background:var(--pink-pale);color:var(--ink);font-family:"Courier New"
           <p class="peek-label">feelings loading ♡</p>
         </div>
 
-        <!-- TIMELINE -->
-        <div class="sh s-fade" id="timeline-s">Our story so far</div>
-        <div class="timeline s-fade">
-          <div class="tl-item"><div class="tl-dot"></div><div
-              class="tl-date">Sep 21, 2025</div><div class="tl-title">It started
-              ♡</div><div class="tl-desc">The day everything shifted. I did not
-              realize it then — but I do now.</div></div>
-          <div class="tl-item"><div class="tl-dot"></div><div
-              class="tl-date">Add a date</div><div class="tl-title">First time I
-              knew</div><div class="tl-desc">Write a memory here — a moment that
-              meant something.</div></div>
-          <div class="tl-item"><div class="tl-dot"></div><div
-              class="tl-date">Add a date</div><div class="tl-title">Something I
-              will not forget</div><div class="tl-desc">A laugh, a place, a
-              quiet moment — fill this in with something real.</div></div>
-          <div class="tl-item"><div class="tl-dot"></div><div
-              class="tl-date">Add a date</div><div class="tl-title">Add
-              another</div><div class="tl-desc">Keep going — every milestone
-              deserves to be here.</div></div>
-          <div class="tl-item"><div class="tl-dot"></div><div
-              class="tl-date">Right now</div><div class="tl-title">Still going
-              ✿</div><div class="tl-desc">And I would not change a single thing
-              about how we got here.</div></div>
-        </div>
-
         <!-- BIG QUOTE -->
         <div class="big-quote s-fade" id="quote-s">
           <div class="bq-wrap">
-            <p class="bq-text">I have waited for you in every version of my
-              life. I think I would find you in all of them.</p>
-            <p class="bq-by">— replace with a quote you love</p>
+            <p class="bq-text">I will do anything in my power to stay with
+              you.</p>
+            <p class="bq-by">— your nalla</p>
           </div>
-        </div>
-
-        <!-- PEEK 5 -->
-        <div class="peek-wrap">
-          <div class="peek-gif center" data-pk="5"><img
-              src="https://media.giphy.com/media/3o6Zt6ML6BklcajjsA/giphy.gif"
-              alt></div>
-          <p class="peek-label">Rupenzal ♡</p>
         </div>
 
         <!-- LETTER -->
         <div class="sh s-fade" id="letter-s">A letter</div>
         <div class="letter-wrap s-fade"><span class="letter-top-bar">🎀 To you
-            —</span>I have been thinking about how to say this properly, and I
-          keep coming back to the same conclusion: there is not a perfect way.
-          So here it is, imperfect and honest.
-
-          You changed things. The way I move through days feels different since
-          you have been in them — quieter in the best sense, like I stopped
-          needing to look for something I already have.
-
-          I notice the smallest things about you. The way you get excited about
-          things you love. The way you look when you do not know anyone is
-          watching. The way you care — quietly, without making it a performance.
-
-          I do not say any of this to put pressure on a single thing. I say it
-          because it is true, and because you deserve to hear it.
-
-          I do not know every version of where this goes. But I know I want to
-          find out, and I know I want to find out with you.
+            —</span>Ok it is you. Eenab guessed right, maam naila straight up
+          just asked me if it is you they all were right, maam naila said she
+          kinda knew for a long time that this will happen well it did shes
+          happy, armish if you dont wanna answer you dont have to its fine but
+          yea it was you i know u didn't like relationships
+          thats why i didnt tell u earlier and also the fact that i thought i
+          will be able to wait for the right time but ig i will never get a
+          right time and it is your choice if you want a RS or not i dont like
+          RS i will admit but well they r needed for understanding between 2
+          people according to maam Naila too, if you dont want a RS its your
+          choice or even a talking stage but answer honestly or jus dont if you
+          dont wanna
 
           — Yours. ♡</div>
 
@@ -592,7 +636,7 @@ html,body{background:var(--pink-pale);color:var(--ink);font-family:"Courier New"
     <div id="yes-ov" onclick="closeYes()">
       <div class="yes-inner">
         <span class="yes-kitty">🎀</span>
-        <p class="yes-title">I love<br>you too!</p>
+        <p class="yes-title">Nalla<br>♡</p>
         <span class="yes-hearts">♡ ♡ ♡</span>
         <p class="yes-sub">tap anywhere to close ✿</p>
       </div>
@@ -703,7 +747,7 @@ window.goTo = function(id) {
   var el = document.getElementById(id);
   if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
 };
-var secIds = ['hero','timer-s','stats-s','reasons-s','notes-s','gallery-s','timeline-s','quote-s','letter-s','quiz-s','q-s'];
+var secIds = ['hero','timer-s','stats-s','reasons-s','notes-s','gallery-s','timeline-s','quote-s','letter-s','nalla-s','quiz-s','q-s'];
 var navDots = document.querySelectorAll('.nd');
 window.addEventListener('scroll', function() {
   var cur = 0;
@@ -724,13 +768,17 @@ window.fleeNo = function(e) {
   if (msg) msg.textContent = noMsgs[Math.min(noCount - 1, noMsgs.length - 1)];
   var btn = document.getElementById('btn-no');
   if (!btn) return;
-  var parentW = btn.parentElement.offsetWidth;
+  var parent = btn.parentElement;
+  var parentW = parent.offsetWidth;
+  var parentH = parent.offsetHeight;
   var btnW = btn.offsetWidth;
-  var maxX = (parentW / 2) - (btnW / 2) - 8;
-  var x = (Math.random() - 0.5) * Math.min(maxX * 2, 220);
-  var y = (Math.random() - 0.5) * 100;
-  var rot = (Math.random() - 0.5) * 18;
-  btn.style.transform = 'translateX(calc(-50% + ' + x + 'px)) translateY(' + y + 'px) rotate(' + rot + 'deg)';
+  var btnH = btn.offsetHeight;
+  // random position within parent bounds
+  var newLeft = Math.random() * (parentW - btnW);
+  var newTop = Math.random() * (parentH - btnH);
+  btn.style.left = newLeft + 'px';
+  btn.style.top = newTop + 'px';
+  btn.style.transform = 'rotate(' + ((Math.random() - 0.5) * 20) + 'deg)';
   btn.style.opacity = String(Math.max(0.12, 1 - noCount * 0.09));
 };
 // Attach no button events after DOM ready
@@ -783,19 +831,19 @@ var quizData = [
     q: "What is your favorite word to call me?",
     hint: "the sweetest thing you say ♡",
     answer: "nalla",
-    mem: { emoji: "🤝", label: "First memory unlocked ♡", title: "First time holding hands", desc: "That moment when everything felt right and time stopped. Your hand in mine — I never wanted to let go." }
+    mem: { emoji: "🤝", label: "First memory unlocked ♡", title: "First time holding hands", desc: "We were so nervous. Uni library. Most random spot ever but it had to be there I guess. Joshua was outside doing the absolute most to keep everyone away. I noticed her hands were so soft. She noticed mine were cold and said 'people who betray got cold hands' as a joke.that broke the tension honestly. she looked so pretty." }
   },
   {
     q: "What color were the first flowers I gave you?",
     hint: "think about that day 🌸",
     answer: "pink",
-    mem: { emoji: "🤗", label: "Second memory unlocked ♡", title: "First hug", desc: "When I finally got to hold you properly — you fit perfectly. I think I held on a little too long and I am not even sorry." }
+    mem: { emoji: "🤗", label: "Second memory unlocked ♡", title: "First hug", desc: "We were in the decor room. No one around. We were in a corner and without even thinking I just pinned her to the wall. She hugged me and I hugged her back a bit too tight but it felt so nice. Its the closest we have ever been. i would never forget that, i love her so much." }
   },
   {
     q: "Pasta wali ____?",
     hint: "you know this one 🍝",
     answer: "tummy",
-    mem: { emoji: "💋", label: "Third memory unlocked ♡", title: "First kiss", desc: "I was so nervous. You were so calm. And then everything was perfect. I have been replaying it ever since." }
+    mem: { emoji: "💋", label: "Third memory unlocked ♡", title: "First kiss", desc: "We were in the car. So nervous. Our faces were so close. Lips touching. I went in to bite her lip and that turned into a kiss somehow. That felt so so so nice. We kissed for so long. Got nervous right after and went home. I was holding her hand while driving. My heartbeat was so so fast. that was the day started i started making sure we get togeting so much was going on my head all was her." }
   }
 ];
 var quizIdx = 0;
@@ -885,6 +933,35 @@ function showQuizDone() {
   document.getElementById('quiz-ov').style.display = 'flex';
   for (var i = 0; i < 50; i++) { (function(j){ setTimeout(spawnHeart, j * 55); })(i); }
 }
+
+
+// ANIMATED COUNTERS
+function animateCount(elId, target, duration) {
+  var el = document.getElementById(elId);
+  if (!el) return;
+  var start = 0;
+  var step = Math.ceil(target / (duration / 16));
+  var timer = setInterval(function() {
+    start += step;
+    if (start >= target) { start = target; clearInterval(timer); }
+    el.textContent = start.toLocaleString();
+  }, 16);
+}
+// Trigger counters when nalla section is visible
+var nallaCounted = false;
+var nallaObserver = new IntersectionObserver(function(entries) {
+  if (entries[0].isIntersecting && !nallaCounted) {
+    nallaCounted = true;
+    animateCount('nalla-armish', 1027, 1800);
+    animateCount('nalla-farhan', 909, 1800);
+    animateCount('ily-farhan', 1676, 2000);
+    animateCount('ily-armish', 1297, 2000);
+  }
+}, { threshold: 0.3 });
+setTimeout(function() {
+  var el = document.getElementById('nalla-s');
+  if (el) nallaObserver.observe(el);
+}, 1000);
 
 })();
 </script>
