@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>LHR Trip 🎀</title>
+        <style>
+        /* Base page styling matching your cute theme */
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #fafafa; /* Soft background */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 600px;
+            padding: 40px;
+            text-align: center;
+            line-height: 2;
+            font-size: 1.3rem;
+            font-weight: 500;
+        }
+
+        /* The word animation logic */
+        .word {
+            display: inline-block;
+            color: #000000; /* Starts black */
+            margin-right: 6px; /* Space between words */
+            animation: pinkPulse 4s ease-in-out infinite;
+            transition: transform 0.3s ease;
+        }
+
+        /* The keyframes for fading to pink and back to black */
+        @keyframes pinkPulse {
+            0% { color: #000000; transform: scale(1); }
+            10% { 
+                color: #ff69b4; /* Hot pink */
+                text-shadow: 0 0 8px rgba(255, 105, 180, 0.4); 
+                transform: scale(1.05); /* Slight pop effect */
+            } 
+            30% { color: #000000; transform: scale(1); } /* Fades back to black */
+            100% { color: #000000; transform: scale(1); }
+        }
+
+        /* Cute floating decor at the top */
+        .decor {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Go back button */
+        .back-btn {
+            margin-top: 50px;
+            padding: 12px 30px;
+            background-color: transparent;
+            border: 2px solid #ff69b4;
+            border-radius: 30px;
+            color: #ff69b4;
+            font-size: 1rem;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.1s ease;
+        }
+
+        .back-btn:hover {
+            background-color: #ff69b4;
+            color: white;
+            box-shadow: 0 4px 15px rgba(255, 122, 189, 0.733);
+        }
+    </style>
+    </head>
+    <body>
+
+        <div class="decor">🎀 ♡ ✿</div>
+
+        <div class="container" id="text-container">
+            <!-- The text will be magically injected here by the script below -->
+        </div>
+
+        <!-- Make sure index.html matches the name of your main file -->
+        <a href="index.html" class="back-btn">go back to us ✿</a>
+
+        <script>
+        // The apology message written in your exact typing style
+        const message = "hey armish. i know u really wanted us to go to lhr together. and honestly i wanted to go with u sm. i am so so sorry i couldn't make it this time. i wish i was there with u rn. i promise i will make it up to u very soon. u r peakkk and i miss u more. ♡";
+
+        const container = document.getElementById('text-container');
+        
+        // Split the message into an array of individual words
+        const words = message.split(' ');
+
+        // Loop through each word, wrap it in a <span>,  and apply a staggered delay
+        words.forEach((word, index) => {
+            const span = document.createElement('span');
+            span.className = 'word';
+            span.textContent = word;
+            
+            // This math right here is what makes it light up word-by-word like a wave!
+            // Each word waits 0.3 seconds longer than the previous one before starting its animation.
+            span.style.animationDelay = `${index * 0.1}s`;
+            
+            container.appendChild(span);
+        });
+    </script>
+    </body>
+</html>

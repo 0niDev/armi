@@ -300,6 +300,7 @@ html,body{background:var(--pink-pale);color:var(--ink);font-family:"Courier New"
       <button class="nd" onclick="goTo('letter-s')"></button>
       <button class="nd" onclick="goTo('quiz-s')"></button>
       <button class="nd" onclick="goTo('q-s')"></button>
+      <button class="nd" onclick="goTo('lhr-s')"></button>
     </nav>
 
     <!-- HELLO KITTY PET -->
@@ -614,7 +615,17 @@ html,body{background:var(--pink-pale);color:var(--ink);font-family:"Courier New"
           </div>
           <p class="no-msg" id="no-msg"></p>
         </div>
-
+        <!-- LHR TRIP SECTION -->
+        <div class="sh s-fade" id="lhr-s">Talks</div>
+        <div class="block-wrapper reveal">
+          <div class="anim-bg"></div>
+          <div class="anim-content" style="padding: 20px; text-align: center;">
+            <button class="quiz-start-btn"
+              onclick="window.location.href='lhr_trip1.html'">
+              LHR Trip 🎀
+            </button>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -748,7 +759,8 @@ window.goTo = function(id) {
   var el = document.getElementById(id);
   if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
 };
-var secIds = ['hero','timer-s','stats-s','reasons-s','notes-s','gallery-s','timeline-s','quote-s','letter-s','nalla-s','quiz-s','q-s'];
+// Find this line and update it:
+var secIds = ['hero','timer-s','stats-s','reasons-s','notes-s','gallery-s','timeline-s','quote-s','letter-s','nalla-s','quiz-s','q-s','lhr-s'];
 var navDots = document.querySelectorAll('.nd');
 window.addEventListener('scroll', function() {
   var cur = 0;
